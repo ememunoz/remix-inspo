@@ -5,12 +5,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "remix";
-import type { MetaFunction } from "remix";
+} from 'remix'
+import type { LinksFunction, MetaFunction } from 'remix'
+
+import tailwind from './tailwind.css'
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
-};
+  return { title: 'New Remix App' }
+}
+
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: tailwind },
+]
 
 export default function App() {
   return (
@@ -28,5 +34,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
