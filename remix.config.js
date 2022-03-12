@@ -5,8 +5,8 @@ module.exports = {
   serverBuildTarget: 'netlify',
   server: './server.js',
   ignoredRouteFiles: ['.*'],
-  assetsBuildDirectory: 'public/build/inspo',
-  publicPath: '/build/inspo',
+  assetsBuildDirectory: 'public/inspo/build',
+  publicPath: 'inspo/build',
   // appDirectory: "app",
   // serverBuildPath: "netlify/functions/server/index.js",
   // devServerPort: 8002
