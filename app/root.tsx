@@ -1,3 +1,5 @@
+import reachDialogStyles from '@reach/dialog/styles.css'
+import reachMenuStyles from '@reach/menu-button/styles.css'
 import {
   Links,
   LiveReload,
@@ -8,14 +10,17 @@ import {
 } from 'remix'
 import type { LinksFunction, MetaFunction } from 'remix'
 
-import tailwind from './tailwind.css'
+import TopBar from './components/organisms/top-bar'
+import baseStyle from './styles/base.css'
 
 export const meta: MetaFunction = () => {
   return { title: 'New Remix App' }
 }
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: tailwind },
+  { rel: 'stylesheet', href: reachDialogStyles },
+  { rel: 'stylesheet', href: reachMenuStyles },
+  { rel: 'stylesheet', href: baseStyle },
 ]
 
 export default function App() {
@@ -28,6 +33,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <TopBar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

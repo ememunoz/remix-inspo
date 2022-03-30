@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-banner-row {
+  grid-auto-rows: 40px;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.debug {
+  outline: red solid 1px;
+}
+
+[data-reach-dialog-content] {
+  padding: 0;
+  width: 90vw;
+}
